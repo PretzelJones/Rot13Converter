@@ -1256,6 +1256,9 @@ containing a value of this type.
         public static final int titulotextoconvertido=0x7f0a0010;
     }
     public static final class style {
+        public static final int AboutDropDown=0x7f0b008e;
+        public static final int AboutPopupStyle=0x7f0b008d;
+        public static final int ActionBarStyle=0x7f0b008f;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -1275,7 +1278,6 @@ containing a value of this type.
         AppBaseTheme from BOTH res/values/styles.xml and
         res/values-v11/styles.xml on API 14+ devices.
     
- API 14 theme customizations can go here. 
 
         Base application theme for API 14+. This theme completely replaces
         AppBaseTheme from BOTH res/values/styles.xml and
@@ -1287,6 +1289,7 @@ containing a value of this type.
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f0b008c;
+        public static final int MyActionBarTitle=0x7f0b0090;
         /**  Mimic text appearance in select_dialog_item.xml 
          */
         public static final int TextAppearance_AppCompat_Base_CompactMenu_Dialog=0x7f0b0063;

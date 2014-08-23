@@ -6,6 +6,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Build;
 import android.os.Bundle;
 import android.content.Intent;
+import android.graphics.Color;
 import android.widget.TextView;
 
 public class Rot13Converted extends ActionBarActivity {
@@ -17,7 +18,8 @@ public class Rot13Converted extends ActionBarActivity {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT){
         	SystemBarTintManager tintManager = new SystemBarTintManager(this);
         	tintManager.setStatusBarTintEnabled(true);
-        	tintManager.setStatusBarTintResource(R.drawable.abc_ab_stacked_solid_dark_holo);
+        	tintManager.setTintColor(Color.parseColor("#3D9BDA"));
+        	//tintManager.setStatusBarTintResource(R.drawable.abc_ab_stacked_solid_dark_holo);
         	tintManager.setNavigationBarTintEnabled(false);
         	
         }

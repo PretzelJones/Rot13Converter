@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme for API 14+. This theme completely replaces
@@ -6,7 +6,30 @@
         res/values-v11/styles.xml on API 14+ devices.
     -->
     <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- API 14 theme customizations can go here. -->
     </style>
-
+    
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:popupMenuStyle">@style/AboutPopupStyle</item>
+        <item name="android:dropDownListViewStyle">@style/AboutDropDown</item>
+        <item name="android:actionBarStyle">@style/ActionBarStyle</item>
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
+    </style>
+    
+    <style name="AboutPopupStyle" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">#3D9BDA</item>
+    </style>
+    
+    <style name="AboutDropDown" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">#3D9BDA</item>
+    </style>
+    
+    <style name="ActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">#3D9BDA</item>
+        <item name="android:textStyle">@style/MyActionBarTitle</item>
+    </style>
+    
+    <style name="MyActionBarTitle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    
 </resources>

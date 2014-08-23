@@ -352,8 +352,12 @@ int string convertir 0x7f0a000f
 int string title_activity_about 0x7f0a0012
 int string title_activity_rot13_converted 0x7f0a0011
 int string titulotextoconvertido 0x7f0a0010
+int style AboutDropDown 0x7f0b008e
+int style AboutPopupStyle 0x7f0b008d
+int style ActionBarStyle 0x7f0b008f
 int style AppBaseTheme 0x7f0b008b
 int style AppTheme 0x7f0b008c
+int style MyActionBarTitle 0x7f0b0090
 int style TextAppearance_AppCompat_Base_CompactMenu_Dialog 0x7f0b0063
 int style TextAppearance_AppCompat_Base_SearchResult 0x7f0b006d
 int style TextAppearance_AppCompat_Base_SearchResult_Subtitle 0x7f0b006f

@@ -13,6 +13,8 @@ import android.view.View.OnClickListener;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.widget.TextView;
@@ -27,7 +29,8 @@ public class Main extends ActionBarActivity {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT){
         	SystemBarTintManager tintManager = new SystemBarTintManager(this);
         	tintManager.setStatusBarTintEnabled(true);
-        	tintManager.setStatusBarTintResource(R.drawable.abc_ab_stacked_solid_dark_holo);
+        	tintManager.setTintColor(Color.parseColor("#3D9BDA"));
+        	//tintManager.setStatusBarTintResource(R.drawable.abc_ab_stacked_solid_dark_holo);
         	tintManager.setNavigationBarTintEnabled(false);
         	
         }
@@ -45,8 +48,17 @@ public class Main extends ActionBarActivity {
         		Intent i = new Intent(Main.this,Rot13Converted.class);
         		EditText e = (EditText) findViewById(R.id.editText1);
         		String mensaje = e.getText().toString();
-        		i.putExtra("msj", mensaje);
-        		startActivity(i);
+        			if(mensaje == null || mensaje.equals("")){
+        				Context c = getApplicationContext();
+        				CharSequence txt = "No puede ser vacío el texto";
+        				int duration = Toast.LENGTH_SHORT;
+        				Toast tst = Toast.makeText(c, txt, duration);
+        				tst.show();
+        			}
+        			else{
+        				i.putExtra("msj", mensaje);
+        				startActivity(i);
+        			}
         	}
         });
     }
