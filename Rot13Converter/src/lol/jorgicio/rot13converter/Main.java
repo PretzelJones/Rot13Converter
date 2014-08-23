@@ -1,8 +1,11 @@
 package lol.jorgicio.rot13converter;
 
+import com.readystatesoftware.systembartint.SystemBarTintManager;
+
 import android.support.v7.app.ActionBarActivity;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -11,6 +14,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.content.Intent;
+import android.graphics.Color;
 import android.widget.TextView;
 
 
@@ -20,6 +24,13 @@ public class Main extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT){
+        	SystemBarTintManager tintManager = new SystemBarTintManager(this);
+        	tintManager.setStatusBarTintEnabled(true);
+        	tintManager.setStatusBarTintResource(R.drawable.abc_ab_stacked_solid_dark_holo);
+        	tintManager.setNavigationBarTintEnabled(false);
+        	
+        }
         TextView t = (TextView) findViewById(R.id.textView1);
         String texto = "Bienvenidos al conversor de Rot13. "
         		+ "Escriba su texto normal o en Rot13 para ser convertido. "
